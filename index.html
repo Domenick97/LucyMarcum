@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Christmas Surprise</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
+    <script language="Javascript" type="text/Javascript" src="main.js"></script>
+
+</head>
+
+<body style="background-color: #D5EDF9">
+
+    <script>
+        var christmas = new Date("Dec 25, 2018 00:00:00").getTime();
+
+        var x = setInterval(function () {
+            var now = new Date().getTime();
+            var difference = christmas - now;
+
+            var days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            document.getElementById("countdownTimer").innerHTML = days + "d, " + hours + "h, "
+                + minutes + "m, " + seconds + "s";
+
+        }, 1000);
+    </script>
+    <section class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-6" style="margin-bottom: 3em;margin-top: 3em;text-align: center">
+                <h2>Christmas Present Countdown</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-4">
+                <img src="assets/images/Present.png" width="98%" style="margin: 1%" />
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-4" style="margin-bottom: 2em;margin-top: 2em;text-align: center">
+                <h4 id="countdownTimer">0 d, 0 h, 0 m, 0 s</h4>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
