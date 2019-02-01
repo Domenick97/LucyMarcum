@@ -63,6 +63,14 @@
 
         }
 
+        .blink_me {
+            animation: blinker 1s linear infinite;
+        }
+
+@keyframes blinker {  
+  50% { opacity: 0; }
+}
+
         /* color: rgb(255, 201, 214); */
     </style>
 
@@ -113,7 +121,9 @@
                 <div style="max-width: 200px;background-color: rgb(255, 205, 220);margin:auto">
                     <img src="assets/images/self.jpg" style="width: 100%; max-width: 200px;margin: 15px 15px -15px -15px;" />
                 </div>
-                <div style="margin: 1em auto; text-align: center"><h4>Lucy Marcum</h4></div>
+                <div style="margin: 1em auto; text-align: center">
+                    <h4>Lucy Marcum</h4>
+                </div>
 
             </div>
 
@@ -135,14 +145,20 @@
         <div class="row justify-content-center">
 
             <div class="col-md-8" style=" padding:0 10px">
-                <img src="assets/images/CactusPricky.png" style="width: 100%; max-width: 100px;margin: 10px;" />
+
                 <h3>Current Employment</h3>
 
             </div>
         </div>
         <div class="row justify-content-center">
+            <div class="col-md-2">
+                <img src="assets/images/CactusPricky.png" style="width: 100%; max-width: 100px;margin: 10px;float:right" />
+            </div>
             <div class="col-md-8" style=" padding:0 10px">
                 <ul>
+                    <li>
+                        <h1 class="blink_me">Daily Grind</h1>
+                    </li>
                     <li>Windhover</li>
                     <li>Craft-E-Family</li>
                     <li>Salty C Girls</li>
