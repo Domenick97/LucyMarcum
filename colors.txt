@@ -1,0 +1,27 @@
+<!-- Extra stuff
+    <div class="col-lg-2" style="background-color: #FAE3d9">s</div>
+    <div class="col-lg-2" style="background-color: #FFC9D6">s</div>
+    <div class="col-lg-2" style="background-color: #61C0BF">s</div>
+    <div class="col-lg-2" style="background-color: #BBDED6">s</div>
+    -->
+    <section class="container" style="margin-top: 400px">
+        <div class="row justify-content-center" style="font-size: 24px">
+            <div class="col-lg-2" style="background-color: rgb(255, 205, 220)">s
+            </div>
+            <div class="col-lg-2" style="background-color: rgb(192, 227, 197)">s
+            </div>
+            <div class="col-lg-2" style="background-color: rgb(195, 155, 211)">s
+            </div>
+            <div class="col-lg-2" style="background-color: rgb(168, 229, 235)">s
+            </div>
+
+            <!--rgb(184, 225, 196)-->
+            <div class="col-lg-2" style="background-color: rgb(182, 215, 185)">s
+            </div>
+            <div class="col-lg-2" style="background-color: #9ABD97">s
+            </div>
+
+        </div>
+    </section>
+
+    /* color: rgb(255, 201, 214); */
