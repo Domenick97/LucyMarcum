@@ -16,3 +16,34 @@ $(function () {
         }
     });
 });
+
+window.onload = function () {
+    init();
+    console.log("F")
+}
+
+function init() {
+    var distance = 100
+    if (document.body.scrollTop < distance || document.documentElement.scrollTop < distance) {
+        document.getElementById("main-logo").style.transition = '.3s';
+        document.getElementsByTagName("header")[0].style.transition = '.3s';
+    }
+}
+
+window.onscroll = function () { myFunction() };
+
+
+function myFunction() {
+    var distance = 100;
+    if (document.body.scrollTop > distance || document.documentElement.scrollTop > distance) {
+        document.getElementById("main-logo").style.width = "50px";
+        document.getElementsByTagName("header")[0].style.backgroundColor = "#FFFFFF";
+        document.getElementsByTagName("header")[0].style.height = "68px";
+        document.getElementById("nav-list").style.padding= ".5em 0";
+    } else {
+        document.getElementById("main-logo").style.width = "100px";
+        document.getElementsByTagName("header")[0].style.backgroundColor = "";
+        document.getElementsByTagName("header")[0].style.height = "136px";
+        document.getElementById("nav-list").style.padding= "1em 0";
+    }
+}

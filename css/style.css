@@ -1,10 +1,10 @@
 html {
-    background-color: rgb(255, 205, 220);
+    background-color: #F2D0D9;
 }
 
 body {
     font-size: 16px;
-    margin: 10px;
+    /* margin: 10px; */
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, .04)
 }
 
@@ -17,19 +17,29 @@ body {
     color: #555;
 }
 
-header,
-nav {
+header {
     width: 100%;
+    height: 136px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    /* transition: .3s; */
+}
+
+#main-logo {
+    /* transition: .3s; */
 }
 
 nav ul {
     list-style-type: none;
-    padding: 2em 0;
+    padding: 1em 0;
     overflow: hidden;
     display: table;
     margin: 0 auto;
     font-size: 18px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+
+    /* font-family: 'Raleway', sans-serif; */
 }
 
 nav li {
@@ -48,6 +58,41 @@ nav a:hover {
 
 }
 
+#portrait-wrapper {
+    width: 200px;
+    background-color: #F2DFE2;
+    margin: auto;
+    z-index: 1;
+}
+
+#portrait {
+    width: 230px;
+    margin: -15px -15px -15px -15px;
+    border-radius: 115px;
+    z-index: 2;
+}
+
+#name-b {
+    font-size: 36px;
+    /* font-family: 'Pacifico', sans-serif; */
+    /* font-family: 'Dancing Script', sans-serif; */
+    font-family: 'Satisfy', sans-serif;
+}
+
+#social-media img {
+    width: 28px;
+    height: 25px;
+}
+
+.title {
+    /* font-family: 'Quicksand', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+    padding: 25px 10px 10px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
 .work-card {
     /* border: solid #e9e9e9 1px; */
     border-radius: 5px;
@@ -58,7 +103,7 @@ nav a:hover {
 }
 
 .work-card:hover {
-    transform: translate(0px,-5px);
+    transform: translate(0px, -5px);
     box-shadow: 1px 5px 15px 6px rgba(0, 0, 0, .04);
 }
 
@@ -73,9 +118,11 @@ nav a:hover {
     width: 100%;
     padding: 5px;
     background-color: #f8f8f8;
+    font-family: 'Quicksand', sans-serif;
+
 }
 
-@media only screen and (max-width: 991px){
+@media only screen and (max-width: 991px) {
     .work-head {
         min-height: 80px;
     }
