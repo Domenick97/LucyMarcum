@@ -19,7 +19,6 @@ $(function () {
 
 window.onload = function () {
     init();
-    console.log("F")
 }
 
 function init() {
@@ -39,11 +38,23 @@ function myFunction() {
         document.getElementById("main-logo").style.width = "50px";
         document.getElementsByTagName("header")[0].style.backgroundColor = "#FFFFFF";
         document.getElementsByTagName("header")[0].style.height = "68px";
-        document.getElementById("nav-list").style.padding= ".5em 0";
+        document.getElementsByTagName("nav")[0].style.padding= ".5em 0";
     } else {
         document.getElementById("main-logo").style.width = "100px";
         document.getElementsByTagName("header")[0].style.backgroundColor = "";
         document.getElementsByTagName("header")[0].style.height = "136px";
-        document.getElementById("nav-list").style.padding= "1em 0";
+        document.getElementsByTagName("nav")[0].style.padding= "1em 0";
     }
+}
+
+function scrollToTargetAdjusted(id){
+    var element = document.getElementById(id);
+    var headerOffset = 68;
+    var elementPosition = element.offsetTop -68//.getBoundingClientRect().top;
+    var offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+         top: elementPosition,
+         behavior: "smooth"
+    });
 }

@@ -8,13 +8,10 @@ body {
     box-shadow: 0 0 4px 4px rgba(0, 0, 0, .04)
 }
 
-.navbar-fixed-top.scrolled {
-    background-color: #ddd !important;
-    transition: background-color 200ms linear;
-}
 
-.navbar-fixed-top.scrolled .nav-link {
-    color: #555;
+section {
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 header {
@@ -23,54 +20,89 @@ header {
     position: fixed;
     top: 0;
     z-index: 1;
-    /* transition: .3s; */
 }
 
-#main-logo {
-    /* transition: .3s; */
-}
-
-nav ul {
-    list-style-type: none;
+nav {
     padding: 1em 0;
     overflow: hidden;
-    display: table;
-    margin: 0 auto;
     font-size: 18px;
     font-family: 'Quicksand', sans-serif;
-
     /* font-family: 'Raleway', sans-serif; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    margin: 0 auto;
 }
 
-nav li {
-    display: inline;
+nav div {
     margin: 10px 20px;
 }
 
-nav a {
+nav div {
     text-decoration: none;
     color: #696969;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-nav a:hover {
+nav div:hover {
     text-decoration: none;
-    color: rgb(255, 124, 156);
+    color: #F2ACC6;
+    cursor: pointer;
+}
 
+#main-logo-wrapper {
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cover-background {
+    background: url('../assets/images/backg1.jpeg') no-repeat center top;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.cover-background:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(242, 223, 226, .15);
 }
 
 #portrait-wrapper {
-    width: 200px;
+    display: block;
+    position: relative;
+    /* width: 200px;  */
+    max-width: 200px;
+    width: 100%;
     height: 200px;
     background-color: #F2DFE2;
     margin: auto;
-    z-index: 1;
 }
 
+#portrait-wrapper:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+
 #portrait {
+    position: absolute;
     width: 230px;
-    margin: -15px -15px -15px -15px;
+    right: -15px;
+    top: -15px;
     border-radius: 115px;
-    z-index: 2;
+    background-color: #F2F2F2;
 }
 
 #name-b {
@@ -78,6 +110,19 @@ nav a:hover {
     /* font-family: 'Pacifico', sans-serif; */
     /* font-family: 'Dancing Script', sans-serif; */
     font-family: 'Satisfy', sans-serif;
+}
+
+#lucy-info {
+    padding: 3em 1em 0 1em;
+    max-width: 250px;
+}
+
+
+
+#occupation {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.2em;
+    color: rgba(0, 0, 0, .7);
 }
 
 #social-media img {
@@ -88,7 +133,7 @@ nav a:hover {
 .title {
     /* font-family: 'Quicksand', sans-serif; */
     font-family: 'Roboto', sans-serif;
-    padding: 25px 10px 15px 10px;
+    padding: 0 10px 15px 10px;
     text-align: center;
     font-weight: bold;
     font-size: 2.4em;
@@ -156,13 +201,18 @@ nav a:hover {
     align-items: stretch
 }
 
+.pad {
+    margin-top: 1rem;
+
+}
+
 .card-body {
     display: flex;
     background-color: white;
     width: 100%;
     height: 100%;
     border-radius: 5px;
-    padding:0px;
+    padding: 0px;
     display: flex;
     flex-direction: column;
 }
@@ -216,8 +266,20 @@ nav a:hover {
 }
 
 .card-info-date {
-    color: rbg(0,0,0);
+    color: rbg(0, 0, 0);
     opacity: .6;
     font-size: 14px;
 
+}
+
+@media screen and (max-width: 991px) {
+    #lucy-info {
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #lucy-info {
+        text-align: center;
+    }
 }
